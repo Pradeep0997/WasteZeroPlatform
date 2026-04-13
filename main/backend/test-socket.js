@@ -5,7 +5,7 @@ const { getReceiverSocketId, io } = require("./socket/socket");
 
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://pradeepreddysettipalle_db_user:F59a4FIGrs18tRIk@cluster0.xpfbhs1.mongodb.net/test?appName=Cluster0')
+mongoose.connect(process.env.MONGO_URI )
     .then(async () => {
         console.log("Connected to MongoDB for testing");
 
