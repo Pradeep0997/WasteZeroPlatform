@@ -5,7 +5,7 @@ const User = require('./models/user.model');
 dotenv.config();
 
 async function runTest() {
-    await mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://pradeepreddysettipalle_db_user:F59a4FIGrs18tRIk@cluster0.xpfbhs1.mongodb.net/test?appName=Cluster0');
+    await mongoose.connect(process.env.MONGO_URI');
     const volunteer = await User.findOne({ role: 'volunteer' });
     const ngo = await User.findOne({ role: 'ngo' });
 
